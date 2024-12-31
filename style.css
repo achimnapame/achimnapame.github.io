@@ -1,0 +1,507 @@
+﻿
+/*=========================*/
+/*     Polices du site     */
+/*=========================*/
+
+@font-face {font-family: "libertine"; src: url('fonts/libertine.otf');
+src: url('fonts/libertine.ttf') format("truetype");}
+
+@font-face {font-family: "times"; src: url('fonts/times.otf');
+src: url('fonts/times.ttf') format("truetype"),
+src: url('fonts/times.woff') format("woff");}
+
+
+/*==========================================*/
+/*     Couleurs des textes et des liens     */
+/*==========================================*/
+
+section h1 {color: rgb(0, 0, 255); font-size:40px;}
+
+section h2 {color: rgb(0, 60, 240);}
+
+
+/*==========================*/
+/*     Couleurs du site     */
+/*==========================*/
+
+/* Couleur arriere plan de la page */
+body {margin: auto; background-color: rgba(240, 240, 240, 0.2);}
+
+/* Couleur du titre de la page */
+.titrepage {color: rgba(255, 0, 0, 1);}
+
+/*-----------------*/
+/*  Barre de menu  */
+/*-----------------*/
+
+/* Couleur du texte si icone menu ne s'affiche pas */
+div#barremenu ul li a {color: rgba(0,0,0,1);}
+
+/* Couleur zone de survol de l'icone menu */
+div#barremenu li a:hover { background-color: rgba(200, 200, 200, 1);}
+
+/*-------------------*/
+/*  Barre des titres */
+/*-------------------*/
+
+/* Couleur de l'arriere plan */
+div#barretitre ul {background-color: rgba(40, 50, 40, 1);}
+
+/* Couleur zone de survol */
+div#barretitre li a:hover { background-color: rgba(120, 240, 120, 0.3);}
+
+/* Couleur des textes */
+div#barretitre ul li a, ul li span {color: rgba(255, 255, 255, 1); font-size: 22px;}
+
+/*-------------------------------------*/
+/*  Sous titre de la barre des titres  */
+/*-------------------------------------*/
+
+/* Couleur de l'arriere plan */
+.soustitre li { background-color: rgba(50, 60, 50, 1);}
+
+/* couleur zone de survol */
+div#barretitre li:hover .soustitre li a:hover{background-color: rgba(120, 240, 120, 0.3);}
+
+/* Couleur des textes */
+div#barretitre li:hover .soustitre li a{ color: rgba(255, 255, 255, 1);}
+
+/*--------------*/
+/*  Lien actif  */
+/*--------------*/
+
+/* Lien actif de la barre des titres */
+.liactive {font-weight:700 ; background-color: rgba(120, 240, 120, 0.5);}
+
+.liactive2 {font-weight: 700 ;}
+
+/*--------------------------------------------------------*/
+/*  Couleurs du bloc des titres et sous titre secondaire  */
+/*  (non present dans la barre des titres)                */
+/*--------------------------------------------------------*/
+
+/* couleur barre des titres secondaires */
+.titre1 li a {background-color: rgba(50, 60, 50, 1);}
+
+/* couleur barre sous-titres secondaires */
+.titre2 li a {background-color: rgba(200, 200, 200, 1);}
+
+/* couleurs textes des titre secondaires */
+.titre1 li a {color: rgba(255, 255, 255, 1);} 
+
+/* couleurs textes des sous-titre secondaires*/
+.titre2 li a {color: rgba(0,0,0,1);}
+
+/* couleur des zones de survol titre secondaire */
+.titre1 li a:hover { background-color: rgba(20, 40, 20, 1);}
+
+/* couleur des zones de survol sous-titre secondaire */
+.titre2 li a:hover { background-color: rgba(120, 240, 120, 0.2);}
+
+/*----------------------------*/
+/*  Bloc a gauche de l'ecran  */
+/*----------------------------*/
+
+/* Couleur arriere plan */
+#myname {background-color: rgba(200, 200, 200, 1); }
+
+/* Couleur arriere plan */
+#sectionpage {background-color: rgba(240, 240, 240, 0.2);}
+
+/*--------------------------*/
+/*     Pieds de la page     */
+/*--------------------------*/
+
+/* Couleur arriere plan */
+#piedpage {background-color: rgba(220, 220, 220, 0.4);}
+
+/* couleurs des textes */
+#piedpage {color: rgba(0, 0, 0, 1);}
+
+/*==== FIN - couleurs ====*/
+/*========================*/
+
+
+
+
+
+/*================================================*/
+/*     Parametres de tous les formats d'ecran     */
+/*================================================*/
+
+html{scroll-behavior: smooth;}
+
+#blocpage {width: 92%; margin: auto;}
+
+/*  Bouton vers le haut  */
+.vershaut {position: fixed; bottom: 25px; right: 25px; opacity: 0.2;}
+.vershaut a{height: 40px; width: 40px; text-align: center;
+display: block; border-radius: 2px;}
+
+/* Pieds de la page */
+#piedpage {border-radius: 5px; float:left; text-align: center;
+width: 100%; margin-bottom: 2%;}
+
+/*  Titre de la page  */
+.cadretitre {position: relative; overflow: hidden;
+height: auto; width: 100%; opacity: 1; border-radius: 5px;}
+
+/*----------------------------------------*/
+/*  Bloc titres, sous titres secondaires  */
+/*----------------------------------------*/
+
+.titre1, .titre1 li a, .titre2 {list-style-type: none;
+overflow: hidden; margin: 0; padding: 0;}
+
+.titre1 li a {display: block; text-align: center; padding: 10px 8px;
+text-decoration: none; border-radius: 5px;}
+
+.titre2 li a {display: block; text-align: left; padding: 10px 8px;
+text-decoration: none;}
+
+/*------------------*/
+/*  Texte a cacher  */
+/*------------------*/
+
+.cachetexte {display:none; margin-top: 5px; margin-bottom: 5px;}
+
+/*===================  FIN  ===================*/
+/*=============================================*/
+
+
+
+
+
+/*============================================================*/
+/*     Parametres pour les grands ecrans - plus de 1100px     */
+/*============================================================*/
+
+@media (min-width: 1100px) {
+
+#blocpage {font-family: libertine, times ; font-size: 22px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 140%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+#barremenu ul {list-style-type: none; margin: 0; padding: 0;}
+#barremenu ul li a {display: none;}
+
+/* Format de la barre des titres */
+div#barretitre ul {overflow: auto; white-space: nowrap;
+list-style-type: none; margin: 0; padding: 0; border-radius: 5px;}
+
+div#barretitre li {display: inline-block;}
+
+div#barretitre li a, li span {display: block; text-align: center;
+padding: 12px 10px; text-decoration: none; border-radius: 5px;}
+
+.espace {margin-right: 10px;}
+.ordiverse{float: right;}
+
+/* Sous titre de la barre des titres */
+.soustitre {list-style-type: none; display: none; padding: 0; position: absolute;
+border-radius: 5px ;}
+
+div#barretitre li:hover .soustitre {display: flex; flex-flow: column wrap;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {width: 92%; padding: 4%; border-radius: 5px;}
+
+#sectionpage {width: 100%; border-radius: 5px;}
+
+#information {float:left; width: 20%; margin-top: 2%;}
+
+section {margin-left: 23%; margin-top: 2%; margin-bottom: 5%;}
+
+/* = = FIN = = */
+}
+
+
+/*======================================================================*/
+/*     Parametres pour les ecrans de taille moyenne - 1024 a 1099px     */
+/*======================================================================*/
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+
+#blocpage {font-family: libertine, times ; font-size: 21px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 140%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+#barremenu ul {list-style-type: none; margin: 0; padding: 0;}
+#barremenu ul li a {display: none;}
+
+/* Format de la barre des titres */
+div#barretitre ul {overflow: auto; white-space: nowrap;
+list-style-type: none; margin: 0; padding: 0; border-radius: 5px;}
+
+div#barretitre li {display: inline-block;}
+
+div#barretitre li a, li span {display: block; text-align: center;
+padding: 12px 10px; text-decoration: none; border-radius: 5px;}
+
+.espace {margin-right: 10px;}
+.ordiverse{float: right;}
+
+/* Sous titre de la barre des titres */
+.soustitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px ;}
+
+div#barretitre li:hover .soustitre {display: flex; flex-flow: column wrap;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 4%; width: 20%; padding: 1%; border-radius: 5px;}
+
+#sectionpage {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 5%; width: 24%; border-radius: 5px;}
+
+section {margin-top: 2%; margin-bottom: 5%;}
+
+/* = = FIN = = */
+}
+
+
+/*=====================================================================*/
+/*     Parametres pour les ecrans de taille moyenne - 801 a 1023px     */
+/*=====================================================================*/
+
+@media (min-width: 801px) and (max-width: 1023px) {
+
+#blocpage {font-family: libertine, times ; font-size: 20px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 110%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+/* Barre de menu */
+#barremenu {width: 50px;}
+
+div#barremenu ul {list-style-type: none; margin: 0; padding: 0;
+overflow: hidden; border-radius: 5px;}
+
+div#barremenu li a, li span {display: block; text-align: center;
+text-decoration: none; border-radius: 5px;}
+
+/* Barre de titre vertical */
+#barretitre {width: auto;}
+
+#barretitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px ;}
+
+div#barremenu li:hover #barretitre {display: flex; flex-flow: column wrap;}
+
+div#barremenu li:hover #barretitre li a, li span {padding: 10px 12px;}
+
+.soustitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px;}
+
+div#barretitre li:hover .soustitre {display: flex;
+flex-flow: column wrap; margin-left: 100%; margin-top: -48px;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 4%; width: 24%; padding: 1%; border-radius: 5px;}
+
+#sectionpage {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 5%; width: 28%; border-radius: 5px;}
+
+section {margin-top: 2%; margin-bottom: 2%;}
+
+/* = = FIN = = */
+}
+
+
+/*=========================================================*/
+/*     Parametres pour les petits ecrans - 601 a 800px     */
+/*=========================================================*/
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+#blocpage {font-family: libertine, times ; font-size: 18px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 110%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+/* Barre de menu */
+#barremenu {width: 50px;}
+
+div#barremenu ul {list-style-type: none; margin: 0; padding: 0;
+overflow: hidden; border-radius: 5px;}
+
+div#barremenu li a, li span {display: block; text-align: center;
+text-decoration: none; border-radius: 5px;}
+
+/* Barre de titre vertical */
+#barretitre {width: auto;}
+
+#barretitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px ;}
+
+div#barremenu li:hover #barretitre {display: flex; flex-flow: column wrap;}
+
+div#barremenu li:hover #barretitre li a, li span {padding: 10px 12px;}
+
+.soustitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px;}
+
+div#barretitre li:hover .soustitre {display: flex;
+flex-flow: column wrap; margin-left: 100%; margin-top: -48px;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 4%; width: 24%; padding: 1%; border-radius: 5px;}
+
+#sectionpage {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 5%; width: 32%; border-radius: 5px;}
+
+section {margin-top: 2%; margin-bottom: 2%;}
+
+/* = = FIN = = */
+}
+
+
+/*===========================================================*/
+/*     Parametres pour les petits ecrans - 351px a 600px     */
+/*===========================================================*/
+
+@media (min-width: 351px) and (max-width: 600px) {
+
+#blocpage {font-family: libertine, times ; font-size: 14px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 100%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+/* Parametre barre de menu */
+#barremenu {width: 50px;}
+
+div#barremenu ul {list-style-type: none; margin: 0; padding: 0;
+overflow: hidden; border-radius: 5px;}
+
+div#barremenu li a, li span {display: block; text-align: center;
+text-decoration: none; border-radius: 5px;}
+
+/* Barre de titre vertical */
+#barretitre {width: auto;}
+
+#barretitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px ;}
+
+div#barremenu li:hover #barretitre {display: flex; flex-flow: column wrap;}
+
+div#barremenu li:hover #barretitre li a, li span {padding: 10px 12px;}
+
+.soustitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px;}
+
+div#barretitre li:hover .soustitre {display: flex;
+flex-flow: column wrap; margin-left: 100%; margin-top: -48px;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 4%; width: 24%; padding: 1%; border-radius: 5px;}
+
+#sectionpage {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 5%; width: 32%; border-radius: 5px;}
+
+section {margin-top: 2%; margin-bottom: 2%;}
+
+/* = = FIN = = */
+}
+
+
+/*=================================================================*/
+/*     Parametres pour les tres petits ecrans - moins de 350px     */
+/*=================================================================*/
+
+@media (max-width: 350px) {
+
+body { width: 350px; }
+#blocpage {font-family: libertine, times ; font-size: 14px; font-weight: 400;}
+
+/* Titre de la page */
+.titrepage {position: absolute; width: 100%; top: -20px;
+text-align: center; font-size: 100%;}
+
+/*--------------------*/
+/*  Barre des titres  */
+/*--------------------*/
+
+/* Parametre barre de menu */
+#barremenu {width: 50px;}
+
+div#barremenu ul {list-style-type: none; margin: 0; padding: 0;
+overflow: hidden; border-radius: 5px;}
+
+div#barremenu li a, li span {display: block; text-align: center;
+text-decoration: none; border-radius: 5px;}
+
+/* Barre de titre vertical */
+#barretitre {width: auto;}
+
+#barretitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px ;}
+
+div#barremenu li:hover #barretitre {display: flex; flex-flow: column wrap;}
+
+div#barremenu li:hover #barretitre li a, li span {padding: 10px 12px;}
+
+.soustitre {list-style-type: none; display: none; padding: 0;
+position: absolute; border-radius: 5px;}
+
+div#barretitre li:hover .soustitre {display: flex;
+flex-flow: column wrap; margin-left: 100%; margin-top: -48px;}
+
+/*---------------------------------*/
+/*  Agencement des blocs de pages  */
+/*---------------------------------*/
+
+#myname {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 4%; width: 24%; padding: 1%; border-radius: 5px;}
+
+#sectionpage {float: left; margin-top: 2%; margin-bottom: 2%;
+margin-right: 5%; width: 32%; border-radius: 5px;}
+
+section {margin-top: 2%; margin-bottom: 2%;}
+
+/* = = FIN = = */
+}
